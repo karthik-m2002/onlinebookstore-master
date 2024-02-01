@@ -41,6 +41,9 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+
+
+			
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.1</version>
@@ -48,6 +51,12 @@
 					<warSourceDirectory>WebContent</warSourceDirectory>
 				</configuration>
 			</plugin>
+ <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.7.0.1746</version> <!-- Check if this version is compatible -->
+        </plugin>
+			
 		</plugins>
 	</build>
 	<dependencies>
