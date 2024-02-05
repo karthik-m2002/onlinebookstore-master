@@ -1,2 +1,2 @@
 FROM httpd
-COPY onlinebookstore-0.0.1-SNAPSHOT.war /usr/local/apache2/htdocs/
+COPY /var/lib/jenkins/workspace/onlinebookworld/target/onlinebookstore.war /usr/local/apache2/htdocs/
