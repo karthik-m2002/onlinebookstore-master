@@ -22,9 +22,9 @@ pipeline {
         }
          stage('docker iamge create') {
             steps {
-            sh 'docker build -t ashokimage .'
+            sh 'docker build -t bookmart .'
                 sh 'docker images'
-                sh 'docker tag ashokimage sikindharbasha/myapplication:latest'
+                sh 'docker tag ashokimage sikindharbasha/myprojects:latest'
                 
             }
         }
