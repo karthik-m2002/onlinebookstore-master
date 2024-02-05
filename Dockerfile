@@ -1,2 +1,2 @@
-FROM tomcat
-COPY target/onlinebookstore.war /usr/local/tomcat/webapps/
+FROM httpd
+COPY target/onlinebookstore.war /usr/local/apache2/htdocs/
