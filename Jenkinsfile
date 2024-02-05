@@ -15,11 +15,7 @@ pipeline {
               sh 'mvn clean install'
             }
         }
-         stage('depoly to server') {
-            steps {
-             deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://13.201.22.11:8081/')], contextPath: null, war: '**/*.war'
-            }
-        }
+        
          stage('docker iamge create') {
             steps {
             sh 'docker build -t bookmart .'
