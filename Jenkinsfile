@@ -34,6 +34,8 @@ pipeline {
             sh  docker.withRegistry('https://index.docker.io/v1/', 'dockerid') {
             docker.image("sikindharbasha/myprojects:latest").push()
     }
+          }
+  }
        
     }
 }
