@@ -28,12 +28,12 @@ pipeline {
             }
         }
 
-        stage('Docker registry') {
-            steps {
-            withDockerRegistry(credentialsId: 'dockerid', url: 'https://index.docker.io/v1/') {
-   
-}
-  
+       
+  stage('Docker push Image') {
+          steps {
+            sh  docker.withRegistry('https://index.docker.io/v1/', 'dockerid') {
+            docker.image("sikindharbasha/myprojects:latest").push()
+    }
        
     }
 }
