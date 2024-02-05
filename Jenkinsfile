@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        DOCKERHUB_CREDENTIALS = 'sikindharbasha.dockerhub'
+    }
   tools{
       maven 'maven'
   }
@@ -24,6 +27,12 @@ pipeline {
                 
             }
         }
+
+        stage('Docker registry') {
+            steps {
+            withDockerRegistry(credentialsId: 'dockerid', url: 'https://index.docker.io/v1/') {
+   
+}
   
        
     }
