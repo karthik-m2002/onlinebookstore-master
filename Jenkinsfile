@@ -20,7 +20,7 @@ pipeline {
             steps {
             sh 'docker build -t bookmart .'
                 sh 'docker images'
-                sh 'docker tag ashokimage sikindharbasha/myprojects:latest'
+                sh 'docker tag bookmart sikindharbasha/myprojects:latest'
                 
             }
         }
