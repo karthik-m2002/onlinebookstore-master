@@ -23,19 +23,13 @@ pipeline {
             steps {
             sh 'docker build -t bookmart .'
                 sh 'docker images'
-                sh 'docker tag bookmart sikindharbasha/myprojects:latest'
+               sh 'docker tag bookmart sikindharbasha/myprojects:latest'
                 
             }
         }
 
        
-  stage('Docker push Image') {
-          steps {
-            sh  docker.withRegistry('https://index.docker.io/v1/', 'dockerid') {
-            docker.image("sikindharbasha/myprojects:latest").push()
-    }
-          }
-  }
+ 
        
     }
 }
