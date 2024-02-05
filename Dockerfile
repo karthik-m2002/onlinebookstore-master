@@ -1,2 +1,4 @@
-FROM httpd
-COPY ./target/onlinebookstore.war /usr/local/apache2/htdocs/
+FROM nginx
+COPY /target/onlinebookstore.war /usr/share/nginx/html
+
+
