@@ -21,9 +21,9 @@ pipeline {
         
          stage('docker iamge create') {
             steps {
-            sh 'docker build -t bookmart .'
+            sh 'docker build -t bookmart1 .'
                 sh 'docker images'
-               sh 'docker tag bookmart sikindharbasha/myprojects:latest'
+               sh 'docker tag bookmart1 sikindharbasha/myprojects:latest'
                 
             }
         }
