@@ -1,6 +1,6 @@
 FROM nginx
 
-COPY /target/onlinebookstore.war /usr/share/nginx/html
+COPY **/**/*.war /usr/share/nginx/html
 
 
 
