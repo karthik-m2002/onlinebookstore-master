@@ -1,7 +1,4 @@
-FROM nginx
-
-COPY **/**/*.war /usr/share/nginx/html
-
-
+FROM tomcat
+COPY /target/onlinebookstore.war /usr/local/tomcat/webapps/
 
 
